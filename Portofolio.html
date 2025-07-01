@@ -1,4 +1,6 @@
-<!-- index.html (One-Page Portfolio) --><!DOCTYPE html><html lang="id">
+<!-- Portofolio.html -->
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +9,7 @@
   <script>
     // Smooth scroll
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
           document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
@@ -29,73 +31,76 @@
         <a href="#kontak" class="hover:underline">Kontak</a>
       </nav>
     </div>
-  </header>  <main class="pt-24 max-w-5xl mx-auto p-6">
+  </header>
+
+  <main class="pt-24 max-w-5xl mx-auto p-6">
     <!-- Hero -->
     <section class="text-center mb-16">
       <h2 class="text-3xl font-bold mb-2">Fullstack Developer & AI/Web3 Enthusiast</h2>
       <p>Saya lulusan SMKN 1 Karang Baru jurusan RPL, sedang mendalami Fullstack Web, AI, dan teknologi Web3 seperti smart contract & blockchain.</p>
-    </section><!-- Tentang -->
-<section id="tentang" class="mb-16">
-  <h2 class="text-2xl font-semibold mb-4">Tentang Saya</h2>
-  <p class="mb-2">Saya adalah seorang developer muda dengan latar belakang pendidikan dari SMKN 1 Karang Baru jurusan RPL.</p>
-  <p class="mb-2">Saya sedang mengembangkan skill di bidang <strong>Fullstack Development</strong> (Laravel, React), <strong>Kecerdasan Buatan</strong> (Python, Machine Learning), dan <strong>Web3</strong> (Smart Contract, Blockchain, Solidity).</p>
-</section>
+    </section>
 
-<!-- Skill -->
-<section id="skill" class="mb-16">
-  <h2 class="text-2xl font-semibold mb-4">Skill & Teknologi</h2>
-  <div class="flex flex-wrap gap-3">
-    <span class="bg-gray-200 px-3 py-1 rounded">HTML</span>
-    <span class="bg-gray-200 px-3 py-1 rounded">CSS</span>
-    <span class="bg-gray-200 px-3 py-1 rounded">TailwindCSS</span>
-    <span class="bg-gray-200 px-3 py-1 rounded">Laravel</span>
-    <span class="bg-gray-200 px-3 py-1 rounded">React</span>
-    <span class="bg-gray-200 px-3 py-1 rounded">Python</span>
-    <span class="bg-gray-200 px-3 py-1 rounded">Machine Learning</span>
-    <span class="bg-gray-200 px-3 py-1 rounded">Solidity</span>
-    <span class="bg-gray-200 px-3 py-1 rounded">Smart Contract</span>
-  </div>
-</section>
+    <!-- Tentang -->
+    <section id="tentang" class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Tentang Saya</h2>
+      <p class="mb-2">Saya adalah seorang developer muda dengan latar belakang pendidikan dari SMKN 1 Karang Baru jurusan RPL.</p>
+      <p class="mb-2">Saya sedang mengembangkan skill di bidang <strong>Fullstack Development</strong> (Laravel, React), <strong>Kecerdasan Buatan</strong> (Python, Machine Learning), dan <strong>Web3</strong> (Smart Contract, Blockchain, Solidity).</p>
+    </section>
 
-<!-- Proyek -->
-<section id="proyek" class="mb-16">
-  <h2 class="text-2xl font-semibold mb-4">Proyek GitHub</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="p-4 border rounded shadow bg-white">
-      <h3 class="text-lg font-bold">Judul Proyek</h3>
-      <p class="text-sm text-gray-700">Deskripsi singkat tentang proyek ini.</p>
-      <p class="text-sm italic text-gray-500">Stack: Laravel, React</p>
-      <div class="mt-2 text-sm">
-        <a href="#" class="text-blue-600 hover:underline">Demo</a> |
-        <a href="#" class="text-gray-800 hover:underline">GitHub</a>
+    <!-- Skill -->
+    <section id="skill" class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Skill & Teknologi</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-gray-200 px-3 py-1 rounded">HTML</span>
+        <span class="bg-gray-200 px-3 py-1 rounded">CSS</span>
+        <span class="bg-gray-200 px-3 py-1 rounded">TailwindCSS</span>
+        <span class="bg-gray-200 px-3 py-1 rounded">Laravel</span>
+        <span class="bg-gray-200 px-3 py-1 rounded">React</span>
+        <span class="bg-gray-200 px-3 py-1 rounded">Python</span>
+        <span class="bg-gray-200 px-3 py-1 rounded">Machine Learning</span>
+        <span class="bg-gray-200 px-3 py-1 rounded">Solidity</span>
+        <span class="bg-gray-200 px-3 py-1 rounded">Smart Contract</span>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Aplikasi -->
-<section id="aplikasi" class="mb-16">
-  <h2 class="text-2xl font-semibold mb-4">Riwayat Aplikasi</h2>
-  <div class="space-y-4">
-    <div class="p-4 rounded shadow bg-white">
-      <h3 class="text-lg font-semibold">Sistem Informasi Perpustakaan</h3>
-      <p class="text-sm text-gray-700">Web App berbasis Laravel untuk manajemen data buku, siswa, dan peminjaman.</p>
-      <p class="text-sm text-gray-500">Tahun: 2023 | Stack: Laravel + MySQL</p>
-      <p class="text-sm text-gray-500">Status: Selesai</p>
-    </div>
-  </div>
-</section>
+    <!-- Proyek -->
+    <section id="proyek" class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Proyek GitHub</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-4 border rounded shadow bg-white">
+          <h3 class="text-lg font-bold">Judul Proyek</h3>
+          <p class="text-sm text-gray-700">Deskripsi singkat tentang proyek ini.</p>
+          <p class="text-sm italic text-gray-500">Stack: Laravel, React</p>
+          <div class="mt-2 text-sm">
+            <a href="#" class="text-blue-600 hover:underline">Demo</a> |
+            <a href="#" class="text-gray-800 hover:underline">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Kontak -->
-<section id="kontak" class="mb-8">
-  <h2 class="text-2xl font-semibold mb-4">Kontak Saya</h2>
-  <ul class="space-y-2 text-sm">
-    <li>Email: <a href="mailto:raihan@example.com" class="text-blue-600 hover:underline">raihan@example.com</a></li>
-    <li>WhatsApp: <a href="https://wa.me/628xxxxxxxxxx" class="text-blue-600 hover:underline">+62 8xxxxxxx</a></li>
-    <li>GitHub: <a href="https://github.com/raihan73353" class="text-blue-600 hover:underline">@raihan73353</a></li>
-  </ul>
-</section>
+    <!-- Aplikasi -->
+    <section id="aplikasi" class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4">Riwayat Aplikasi</h2>
+      <div class="space-y-4">
+        <div class="p-4 rounded shadow bg-white">
+          <h3 class="text-lg font-semibold">Sistem Informasi Perpustakaan</h3>
+          <p class="text-sm text-gray-700">Web App berbasis Laravel untuk manajemen data buku, siswa, dan peminjaman.</p>
+          <p class="text-sm text-gray-500">Tahun: 2023 | Stack: Laravel + MySQL</p>
+          <p class="text-sm text-gray-500">Status: Selesai</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Kontak -->
+    <section id="kontak" class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Kontak Saya</h2>
+      <ul class="space-y-2 text-sm">
+        <li>Email: <a href="mailto:raihan@example.com" class="text-blue-600 hover:underline">raihan@example.com</a></li>
+        <li>WhatsApp: <a href="https://wa.me/628xxxxxxxxxx" class="text-blue-600 hover:underline">+62 8xxxxxxx</a></li>
+        <li>GitHub: <a href="https://github.com/raihan73353" class="text-blue-600 hover:underline">@raihan73353</a></li>
+      </ul>
+    </section>
   </main>
 </body>
-                 </html>
+</html>
