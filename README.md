@@ -20,8 +20,7 @@ Didesain dengan animasi interaktif, mode gelap, serta responsif di berbagai pera
 ## 🛠️ Teknologi yang Digunakan
 - **HTML5** → Struktur website  
 - **CSS3** → Styling + Responsif + Animasi  
-- **JavaScript** → Interaktivitas (dark mode, toggle menu, scroll animation)  
-- **Font Awesome / Icon** → Ikon sosial media (opsional)  
+- **JavaScript** → Interaktivitas (dark mode, toggle menu, scroll animation)
 
 ---
 
