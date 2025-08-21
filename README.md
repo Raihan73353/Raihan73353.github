@@ -23,11 +23,10 @@ Didesain dengan animasi interaktif, mode gelap, serta responsif di berbagai pera
 
 ---
 
+## 👉 [Lihat Website](https://raihan73353.github.io/)
+
 ## 📂 Struktur Folder
 ```bash
 portfolio-website/
 │── index.html       # Halaman utama
 └── README.md        # Dokumentasi
-
-
-👉 [Lihat Website](https://raihan73353.github.io/)
