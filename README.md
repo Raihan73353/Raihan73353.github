@@ -1,6 +1,6 @@
 # 🌐 Portfolio Website
 
-![Preview](https://via.placeholder.com/1000x500.png?text=Portfolio+Website+Preview)
+![Preview](https://raihan73353.github.io/)
 
 Website portofolio pribadi yang dibangun menggunakan **HTML, CSS, dan JavaScript**.  
 Didesain dengan animasi interaktif, mode gelap, serta responsif di berbagai perangkat (laptop & mobile).  
@@ -29,7 +29,4 @@ Didesain dengan animasi interaktif, mode gelap, serta responsif di berbagai pera
 ```bash
 portfolio-website/
 │── index.html       # Halaman utama
-│── style.css        # Styling utama
-│── script.js        # Interaktivitas (JS)
-│── assets/          # Gambar & ikon
 └── README.md        # Dokumentasi
