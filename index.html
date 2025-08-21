@@ -62,12 +62,13 @@
     .toggle-btn:hover { background: #0097a7; }
 
     section {
-      min-height: 100vh;
-      padding: 100px 30px 50px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s;
+    padding: 100px 30px 50px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s;
     }
+    #home { min-height: 100vh; }
+
     section.show {
       opacity: 1;
       transform: translateY(0);
@@ -213,6 +214,44 @@
     }
     #contact button:hover { background: #0097a7; }
 
+        /* Contact Buttons */
+    #contact {
+      text-align: center;
+      background: #f5f5f5;
+    }
+    body.dark #contact { background: #1a1a1a; }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .contact-buttons .btn {
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-buttons .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Warna tombol sesuai brand */
+    .btn.wa { background: #25D366; }
+    .btn.ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .btn.gmail { background: #D44638; }
+    .btn.fb { background: #1877F2; }
+    .btn.linkedin { background: #0A66C2; }
+
+    .btn.wa:hover { background: #25D366; } 
+
     /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -284,13 +323,16 @@
 
   <section id="contact">
     <h2>Kontak Saya</h2>
-    <form>
-      <input type="text" placeholder="Nama" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Pesan" rows="5" required></textarea>
-      <button type="submit">Kirim</button>
-    </form>
+    <p>Hubungi saya melalui platform berikut:</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/6281271190756" target="_blank" class="btn wa">WhatsApp</a>
+      <a href="https://instagram.com/raihan_islami7" target="_blank" class="btn ig">Instagram</a>
+      <a href="mailto:raihanisslami@gmail.com" target="_blank" class="btn gmail">Gmail</a>
+      <a href="https://facebook.com/username" target="_blank" class="btn fb">Facebook</a>
+      <a href="https://linkedin.com/in/username" target="_blank" class="btn linkedin">LinkedIn</a>
+    </div>
   </section>
+  
 
   <script>
     // Dark mode toggle
