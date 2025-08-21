@@ -22,6 +22,7 @@
       color: #eee;
     }
 
+    /* Header + Navbar */
     header {
       position: fixed;
       top: 0; left: 0;
@@ -35,37 +36,34 @@
       z-index: 1000;
       backdrop-filter: blur(6px);
     }
+    header h1 { font-size: 1.5rem; }
 
-    header h1 {
-      font-size: 1.5rem;
-      animation: slideIn 1s ease;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
     }
-
-    nav a {
+    nav ul li a {
       color: #fff;
       text-decoration: none;
-      margin: 0 10px;
-      transition: color 0.3s;
+      font-weight: bold;
     }
-    nav a:hover { color: #00bcd4; }
+    nav ul li a:hover { color: #00bcd4; }
 
-    .toggle-btn {
-      background: #00bcd4;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
+    /* Toggle menu burger */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
       color: white;
-      font-size: 0.9rem;
-      transition: background 0.3s;
+      cursor: pointer;
     }
-    .toggle-btn:hover { background: #0097a7; }
 
+    /* Section */
     section {
-    padding: 100px 30px 50px;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s;
+      padding: 100px 30px 50px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s;
     }
     #home { min-height: 100vh; }
 
@@ -74,9 +72,8 @@
       transform: translateY(0);
     }
 
-    /* Home */
+    /* Home (Hero) */
     #home {
-      position: relative;
       background: linear-gradient(135deg, #00bcd4, #2196f3);
       color: white;
       display: flex;
@@ -84,21 +81,9 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      overflow: hidden;
     }
-    #home::before {
-      content: "";
-      position: absolute;
-      top: -50%; left: -50%;
-      width: 200%; height: 200%;
-      background: url('https://www.transparenttextures.com/patterns/diagonal-stripes-light.png');
-      background-size: cover;
-      transform: translateY(0);
-      z-index: 0;
-    }
-    #home h2, #home p { position: relative; z-index: 1; }
     #home h2 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       min-height: 60px;
       border-right: 2px solid white;
       white-space: nowrap;
@@ -107,11 +92,8 @@
     #home p { margin-top: 15px; max-width: 600px; }
 
     /* About */
-    #about {
-      background: #f5f5f5;
-    }
+    #about { background: #f5f5f5; }
     body.dark #about { background: #1a1a1a; }
-    #about h2 { text-align: center; margin-bottom: 20px; }
     .about-container {
       display: flex;
       align-items: center;
@@ -121,19 +103,11 @@
       flex-wrap: wrap;
     }
     .about-container img {
-      width: 200px;
-      height: 200px;
+      width: 200px; height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      animation: fadeIn 2s ease;
     }
-    .about-text {
-      flex: 1;
-      font-size: 1.1rem;
-      animation: fadeIn 3s ease;
-    }
-    .about-text p { margin-bottom: 15px; }
+    .about-text { flex: 1; font-size: 1.1rem; }
 
     /* Services */
     #services .service-list {
@@ -148,13 +122,8 @@
       border-radius: 12px;
       text-align: center;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
     }
     body.dark .service { background: #1e1e1e; }
-    .service:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    }
 
     /* Portfolio */
     #portfolio .projects {
@@ -167,58 +136,12 @@
       background: #fff;
       padding: 20px;
       border-radius: 12px;
-      transition: 0.3s;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
     body.dark .project { background: #1e1e1e; }
-    .project:hover {
-      background: #e3f2fd;
-      transform: scale(1.05);
-    }
-    body.dark .project:hover { background: #2a2a2a; }
 
     /* Contact */
-    #contact form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    #contact input, #contact textarea {
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      width: 100%;
-      background: #fff;
-      transition: border 0.3s;
-    }
-    body.dark #contact input, body.dark #contact textarea {
-      background: #1e1e1e;
-      border: 1px solid #555;
-      color: #eee;
-    }
-    #contact input:focus, #contact textarea:focus {
-      border: 1px solid #00bcd4;
-      outline: none;
-    }
-    #contact button {
-      background: #00bcd4;
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-      font-size: 1rem;
-    }
-    #contact button:hover { background: #0097a7; }
-
-        /* Contact Buttons */
-    #contact {
-      text-align: center;
-      background: #f5f5f5;
-    }
+    #contact { text-align: center; background: #f5f5f5; }
     body.dark #contact { background: #1a1a1a; }
 
     .contact-buttons {
@@ -228,63 +151,60 @@
       gap: 15px;
       margin-top: 20px;
     }
-
     .contact-buttons .btn {
       padding: 12px 25px;
       border-radius: 30px;
       font-weight: bold;
       text-decoration: none;
       color: white;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-
     .contact-buttons .btn:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
-
-    /* Warna tombol sesuai brand */
     .btn.wa { background: #25D366; }
-    .btn.ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .btn.ig { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
     .btn.gmail { background: #D44638; }
     .btn.fb { background: #1877F2; }
     .btn.linkedin { background: #0A66C2; }
 
-    .btn.wa:hover { background: #25D366; } 
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
     /* Responsive */
     @media (max-width: 768px) {
-      header { flex-direction: column; }
-      nav { margin: 10px 0; }
-      #home h2 { font-size: 1.8rem; }
+      nav ul {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        flex-direction: column;
+        background: #333;
+        width: 200px;
+        padding: 20px;
+        display: none;
+      }
+      nav ul.show { display: flex; }
+      .menu-toggle { display: block; }
       .about-container { flex-direction: column; text-align: center; }
+      #home h2 { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Portofolio Saya</h1>
+    <h1>Portofolio</h1>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Jasa</a>
-      <a href="#portfolio">Portofolio</a>
-      <a href="#contact">Kontak</a>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-    <button class="toggle-btn" id="darkToggle">Dark Mode</button>
+    <button id="darkToggle" class="toggle-btn">Dark Mode</button>
   </header>
-
+  
   <section id="home">
     <h2 id="typing"></h2>
     <p>Saya membuat website modern, cepat, responsif, dan interaktif.</p>
@@ -295,9 +215,8 @@
     <div class="about-container">
       <img src="IMG_20250821_173001.jpg" alt="Foto Profil">
       <div class="about-text">
-        <p>Halo, nama saya <b>Raihan</b>, seorang web developer asal Indonesia. Awalnya saya belajar coding secara otodidak dari rasa penasaran.</p>
-        <p>Sekarang saya fokus mengembangkan website yang <b>responsif</b>, <b>modern</b>, dan juga indah secara visual. 
-        Saya percaya bahwa website bukan hanya alat, tetapi juga identitas digital.</p>
+        <p>Halo, nama saya <b>Raihan</b>, seorang web developer asal Indonesia.</p>
+        <p>Saya fokus mengembangkan website yang <b>responsif</b>, <b>modern</b>, dan indah secara visual.</p>
       </div>
     </div>
   </section>
@@ -333,13 +252,19 @@
     </div>
   </section>
   
-
   <script>
     // Dark mode toggle
     const toggleBtn = document.getElementById("darkToggle");
     toggleBtn.addEventListener("click", () => {
       document.body.classList.toggle("dark");
       toggleBtn.textContent = document.body.classList.contains("dark") ? "Light Mode" : "Dark Mode";
+    });
+
+    // Navbar mobile toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
     });
 
     // Scroll reveal animation
@@ -354,7 +279,7 @@
       });
     });
 
-    // Typing effect di Home
+    // Typing effect
     const text = "Halo, Saya Raihan Seorang Developer Web";
     let index = 0;
     function type() {
